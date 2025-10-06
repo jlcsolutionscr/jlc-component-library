@@ -4,7 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import type { SelectProps } from "@mui/material/Select";
 
-export const useStyles = makeStyles()(() => ({
+const useStyles = makeStyles()(() => ({
   container: {
     width: "100%",
   },
