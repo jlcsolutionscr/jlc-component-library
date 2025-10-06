@@ -7,3 +7,4 @@ export * from "../src/components/select";
 export * from "../src/components/tab";
 export type { TextFieldOnChangeEventType } from "../src/components/text-field";
 export * from "../src/components/text-field";
+export * from "../src/hooks/use-window-size";
