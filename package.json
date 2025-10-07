@@ -1,6 +1,7 @@
 {
   "name": "jlc-component-library",
-  "version": "1.0.4",
+  "version": "1.0.6",
+  "access": "public",
   "type": "module",
   "files": [
     "dist"
@@ -12,8 +13,7 @@
     ".": {
       "import": "./dist/jlc-component-library.js",
       "require": "./dist/jlc-component-library.umd.cjs"
-    },
-    "./dist/style.css": "./dist/style.css"
+    }
   },
   "sideEffects": false,
   "scripts": {

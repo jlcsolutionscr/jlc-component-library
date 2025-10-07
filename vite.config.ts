@@ -5,25 +5,19 @@ import { resolve } from "path";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      insertTypesEntry: true,
-    }),
-  ],
+  plugins: [react(), dts()],
   build: {
     lib: {
       entry: resolve(__dirname, "lib/main.ts"), // Your library's entry point
-      name: "JLCComponentLibrary", // Global variable name if using UMD
-      fileName: (format) => `jlc-component-library.${format}.js`,
+      name: "JLCComponentLibrary",
+      formats: ["es", "umd"],
     },
     rollupOptions: {
-      external: ["react", "react-dom", "react/jsx-runtime"], // Exclude React and ReactDOM from the bundle
+      external: ["react", "react-dom"], // Exclude React and ReactDOM from the bundle
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          "react/jsx-runtime": "react/jsx-runtime",
         },
       },
     },
