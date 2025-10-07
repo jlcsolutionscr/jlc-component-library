@@ -7,7 +7,6 @@ import Select from "../src/components/select";
 import Tab from "../src/components/tab";
 import TextField from "../src/components/text-field";
 import useWindowSize from "../src/hooks/use-window-size";
-import type TextFieldOnChangeEventType from "../src/components/text-field";
 
 export {
   Button,
@@ -20,4 +19,5 @@ export {
   TextField,
   useWindowSize,
 };
-export type { TextFieldOnChangeEventType };
+
+export type { TextFieldOnChangeEventType } from "../src/components/text-field";
