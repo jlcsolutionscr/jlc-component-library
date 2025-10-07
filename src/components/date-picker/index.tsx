@@ -2,10 +2,6 @@ import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { format, parse } from "date-fns";
 
-export type TextFieldOnChangeEventType = {
-  target: { id?: string; value: string };
-};
-
 interface CustomDatePickerProps {
   value: string | Date;
   label: string;
@@ -13,8 +9,16 @@ interface CustomDatePickerProps {
   disabled?: boolean;
 }
 
-export default function CustomDatePicker({ label, value, disabled, onChange }: CustomDatePickerProps) {
-  const dateValue = typeof value === "string" ? parse(value.substring(0, 10), "yyyy-MM-dd", new Date()) : value;
+export default function CustomDatePicker({
+  label,
+  value,
+  disabled,
+  onChange,
+}: CustomDatePickerProps) {
+  const dateValue =
+    typeof value === "string"
+      ? parse(value.substring(0, 10), "yyyy-MM-dd", new Date())
+      : value;
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePicker
@@ -25,7 +29,10 @@ export default function CustomDatePicker({ label, value, disabled, onChange }: C
         value={dateValue}
         slotProps={{ textField: { size: "small" } }}
         onChange={(value: Date | null) =>
-          onChange(format(value !== null ? value : Date.now(), "yyyy-MM-dd") + "T23:59:59")
+          onChange(
+            format(value !== null ? value : Date.now(), "yyyy-MM-dd") +
+              "T23:59:59"
+          )
         }
       />
     </LocalizationProvider>

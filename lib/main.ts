@@ -2,7 +2,7 @@ import Button from "../src/components/button";
 import DataGrid from "../src/components/data-grid";
 import DatePicker from "../src/components/date-picker";
 import LabelField from "../src/components/label-field";
-import DropDown from "../src/components/list-dropdown";
+import ListDropDown from "../src/components/list-dropdown";
 import Select from "../src/components/select";
 import Tab from "../src/components/tab";
 import TextField from "../src/components/text-field";
@@ -13,7 +13,7 @@ export {
   DataGrid,
   DatePicker,
   LabelField,
-  DropDown,
+  ListDropDown,
   Select,
   Tab,
   TextField,
@@ -21,3 +21,4 @@ export {
 };
 
 export type { TextFieldOnChangeEventType } from "../src/components/text-field";
+export type { ListDropdownOnChangeEventType } from "../src/components/list-dropdown";

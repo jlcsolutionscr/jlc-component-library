@@ -7,19 +7,17 @@ import { TablePaginationActions } from "../data-grid";
 
 export type ListDropdownOnChangeEventType = ChangeEvent<HTMLInputElement>;
 
-type RowType = { Id: number; Descripcion: string };
-
 interface ListDropdownProps {
   page: number;
   rowsCount: number;
   rowsPerPage: number;
-  rows: RowType[];
+  rows: any[];
   label: string;
   value: string;
   disabled: boolean;
   onChange: (event: ListDropdownOnChangeEventType) => void;
   onPageChange: (page: number) => void;
-  onItemSelected: (row: object) => void;
+  onItemSelected: (row: any) => void;
 }
 
 export default function ListDropdown({
@@ -46,7 +44,7 @@ export default function ListDropdown({
     document.removeEventListener("click", outsideClickHandler);
   };
 
-  const handleOnClick = (item: RowType) => {
+  const handleOnClick = (item: any) => {
     outsideClickHandler();
     onItemSelected(item);
   };
