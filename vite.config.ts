@@ -19,12 +19,25 @@ export default defineConfig({
       fileName: "jlc-component-library",
     },
     rollupOptions: {
-      external: ["react", "react-dom", "react/jsx-runtime"], // Exclude React and ReactDOM from the bundle
+      external: [
+        "react",
+        "react-dom",
+        "react/jsx-runtime",
+        "@emotion/react",
+        "@emotion/styled",
+        "@mui/material",
+        "@mui/x-date-pickers",
+        "tss-react",
+      ],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
           "react/jsx-runtime": "react/jsx-runtime",
+          "@emotion/react": "emotionReact",
+          "@emotion/styled": "emStyled",
+          "@mui/material": "MaterialUI",
+          "@mui/x-date-pickers": "xDatePickers",
         },
       },
     },
