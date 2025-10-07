@@ -9,16 +9,8 @@ interface CustomDatePickerProps {
   disabled?: boolean;
 }
 
-export default function CustomDatePicker({
-  label,
-  value,
-  disabled,
-  onChange,
-}: CustomDatePickerProps) {
-  const dateValue =
-    typeof value === "string"
-      ? parse(value.substring(0, 10), "yyyy-MM-dd", new Date())
-      : value;
+export default function CustomDatePicker({ label, value, disabled, onChange }: CustomDatePickerProps) {
+  const dateValue = typeof value === "string" ? parse(value.substring(0, 10), "yyyy-MM-dd", new Date()) : value;
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePicker
@@ -29,10 +21,7 @@ export default function CustomDatePicker({
         value={dateValue}
         slotProps={{ textField: { size: "small" } }}
         onChange={(value: Date | null) =>
-          onChange(
-            format(value !== null ? value : Date.now(), "yyyy-MM-dd") +
-              "T23:59:59"
-          )
+          onChange(format(value !== null ? value : Date.now(), "yyyy-MM-dd") + "T23:59:59")
         }
       />
     </LocalizationProvider>

@@ -2,7 +2,7 @@ import { makeStyles } from "tss-react/mui";
 
 import { TRANSITION_ANIMATION } from "../../utils/constants";
 
-export const useStyles = makeStyles()((theme) => ({
+export const useStyles = makeStyles()(theme => ({
   container: {
     border: "none",
     display: "inline-flex",
@@ -57,11 +57,7 @@ export const useStyles = makeStyles()((theme) => ({
     textRendering: "auto",
     cursor: "text",
     borderRadius: theme.shape.borderRadius,
-    border: `1px solid ${
-      theme.palette.mode === "dark"
-        ? "rgba(255, 255, 255, 0.23)"
-        : "rgba(0, 0, 0, 0.23)"
-    }`,
+    border: `1px solid ${theme.palette.mode === "dark" ? "rgba(255, 255, 255, 0.23)" : "rgba(0, 0, 0, 0.23)"}`,
     transition: `color ${TRANSITION_ANIMATION}, border ${TRANSITION_ANIMATION}`,
   },
   inputOutline: {

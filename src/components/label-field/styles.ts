@@ -2,7 +2,7 @@ import { makeStyles } from "tss-react/mui";
 
 import { TRANSITION_ANIMATION } from "../../utils/constants";
 
-export const useStyles = makeStyles()((theme) => ({
+export const useStyles = makeStyles()(theme => ({
   container: {
     border: "none",
     margin: "0",
@@ -23,10 +23,7 @@ export const useStyles = makeStyles()((theme) => ({
   label: {
     backgroundColor: theme.palette.background.paper,
     transition: `all ${TRANSITION_ANIMATION}`,
-    color:
-      theme.palette.mode === "dark"
-        ? "rgba(255, 255, 255, 0.7)"
-        : "rgba(0, 0, 0, 0.6)",
+    color: theme.palette.mode === "dark" ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.6)",
     transform: "translate(14px, -6px) scale(0.75)",
     transformOrigin: "top left",
     zIndex: "1",
@@ -61,11 +58,7 @@ export const useStyles = makeStyles()((theme) => ({
     boxSizing: "content-box",
     textRendering: "auto",
     borderRadius: theme.shape.borderRadius,
-    border: `1px solid ${
-      theme.palette.mode === "dark"
-        ? "rgba(255, 255, 255, 0.23)"
-        : "rgba(0, 0, 0, 0.23)"
-    }`,
+    border: `1px solid ${theme.palette.mode === "dark" ? "rgba(255, 255, 255, 0.23)" : "rgba(0, 0, 0, 0.23)"}`,
     "&:focus": {
       outline: "0",
       borderColor: "#90CAF9",

@@ -1,9 +1,5 @@
 import type { SyntheticEvent } from "react";
-import TextField from "@mui/material/TextField";
-import type {
-  BaseTextFieldProps,
-  TextFieldVariants,
-} from "@mui/material/TextField";
+import TextField, { type BaseTextFieldProps, type TextFieldVariants } from "@mui/material/TextField";
 
 import { useStyles } from "./styles";
 
