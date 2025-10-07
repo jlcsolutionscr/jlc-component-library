@@ -9,7 +9,6 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      tsconfigPath: "./tsconfig.app.json",
     }),
   ],
   build: {
@@ -20,11 +19,12 @@ export default defineConfig({
       fileName: "jlc-component-library",
     },
     rollupOptions: {
-      external: ["react", "react-dom"], // Exclude React and ReactDOM from the bundle
+      external: ["react", "react-dom", "react/jsx-runtime"], // Exclude React and ReactDOM from the bundle
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
+          "react/jsx-runtime": "react/jsx-runtime",
         },
       },
     },
