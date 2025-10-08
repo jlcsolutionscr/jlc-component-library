@@ -1,6 +1,6 @@
 {
   "name": "jlc-component-library",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "access": "public",
   "type": "module",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "main": "./dist/jlc-component-library.umd.cjs",
   "module": "./dist/jlc-component-library.js",
-  "types": "./dist/jlc-component-library.d.ts",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/jlc-component-library.js",
@@ -39,6 +39,7 @@
     "@types/node": "20.10.1",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
+    "@typescript-eslint/eslint-plugin": "8.20.0",
     "@typescript-eslint/parser": "8.20.0",
     "@vitejs/plugin-react": "4.3.4",
     "eslint": "9.18.0",
@@ -51,7 +52,7 @@
     "prettier": "3.4.2",
     "sass": "1.83.4",
     "typescript": "5.8.3",
-    "vite": "^6.3.5",
+    "vite": "6.3.5",
     "vite-plugin-dts": "4.5.4"
   }
 }

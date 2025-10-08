@@ -1,4 +1,4 @@
-import { Button as MuiButton } from "@mui/material";
+import MuiButton from "@mui/material/Button";
 
 import { useStyles } from "./styles";
 
