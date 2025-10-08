@@ -1,6 +1,6 @@
 {
   "name": "jlc-component-library",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "access": "public",
   "type": "module",
   "files": [
@@ -11,7 +11,10 @@
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/jlc-component-library.js",
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/jlc-component-library.js"
+      },
       "require": "./dist/jlc-component-library.umd.cjs"
     }
   },
